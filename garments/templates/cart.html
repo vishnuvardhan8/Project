@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+<h3>Selected Shirts</h3>
+<h3>Total price of the items:Rs.{{tot_price}}</h3>
+<table width=100% border=1>
+{% for l in lst %}
+    <tr>
+    <td width=50%><br>
+     <img src='{{l.photo.url}}' width=150 height=170 />
+    </td>
+    <td width=50%><h3>Product details:</h3><br>
+     Name of the Shirt:{{l.name}}
+     Description:{{l.desc}}<br>
+     Price:{{l.price}}<br>
+     <img src='{{l.photo.url}}' width=100 height=120><br>
+     </td>  
+     </tr>
+{% endfor %}
+</table>
+</div>
+
+{% endblock %}
+
+  

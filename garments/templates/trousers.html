@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="container">
+<h3>All Trousers available in our shop</h3>
+<table width=100% border=0>
+{% for l in lst %}
+    <tr>
+    <td width=50%><h3>{{l.name}}</h3><br>
+     <img src='{{l.photo.url}}' width=150 height=170 />
+    </td>
+    <td width=50%><h3>Product details:</h3><br>
+     Description:{{l.desc}}<br>
+     Price:{{l.price}}<br>
+     Quantity:{{l.stock}}<br>
+    <a href='cart{{l.id}}'>Click to Add to Cart</a>
+{% endfor %}
+</table>
+</div>
+
+{% endblock %}
